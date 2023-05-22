@@ -1,24 +1,32 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints Buzz each numbers of 3 and 5.
- * Return: Always 0.
+ * main - Enrty
+ *
+ * Description: prints the numbers 1 - 100 w/
+ * Fizz for multiples of 3, Bizz for multiple of 5,
+ * and FizzBizz for multiple of both
+ *
+ * Return: always 0
  */
 int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
+	for (i = 0; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i  % 5 == 0)
-			printf("FizzBuzz ");
+		if (i % 15 == 0)
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			printf("Fizz ");
+			printf("Fizz");
 		else if (i % 5 == 0)
-			printf("Buzz ");
+			printf("Bizz");
 		else
-			printf("%d ", i);
+			printf("%i", i);
+		if (i < 100)
+			printf(" ");
 	}
-	printf("Buzz\n");
+	printf("\n");
 	return (0);
 }
